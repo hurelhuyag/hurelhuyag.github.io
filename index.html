@@ -1,1 +1,280 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hurelhuyag | Software Engineer</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --bg2: #111827;
+            --card: rgba(255,255,255,0.05);
+            --text: #e5e7eb;
+            --muted: #94a3b8;
+            --accent: #38bdf8;
+            --border: rgba(255,255,255,0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: linear-gradient(180deg, var(--bg), var(--bg2));
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: min(1050px, 92%);
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 12px;
+        }
+
+        header p {
+            color: var(--muted);
+            max-width: 720px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .links {
+            margin-top: 28px;
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: var(--text);
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 12px 18px;
+            border-radius: 12px;
+            transition: .2s ease;
+        }
+
+        .links a:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 34px 0;
+        }
+
+        h2 {
+            font-size: 1.9rem;
+            color: var(--accent);
+            margin-bottom: 22px;
+        }
+
+        .intro {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 26px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 24px;
+            transition: .2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(56,189,248,.45);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: .95rem;
+            margin-bottom: 14px;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: .8rem;
+            color: var(--accent);
+            border: 1px solid rgba(56,189,248,.3);
+            padding: 4px 10px;
+            border-radius: 999px;
+            margin-bottom: 12px;
+        }
+
+        .card a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: .92rem;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 10px 14px;
+            color: var(--text);
+            font-size: .95rem;
+        }
+
+        footer {
+            padding: 50px 0 60px;
+            text-align: center;
+            color: var(--muted);
+            font-size: .9rem;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Hurelhuyag</h1>
+        <p>
+            Software engineer with 10+ years of experience building Java backend systems,
+            Flutter applications, and embedded Linux projects.
+        </p>
+
+        <div class="links">
+            <a href="https://github.com/hurelhuyag" target="_blank">GitHub</a>
+            <a href="https://hurelhuyag.github.io" target="_blank">Website</a>
+            <a href="https://pub.dev/publishers" target="_blank">pub.dev Publisher</a>
+        </div>
+    </header>
+
+    <section>
+        <h2>About Me</h2>
+        <div class="intro">
+            I build practical software for mobile, desktop, and embedded devices.
+            My work ranges from Spring and Hibernate libraries to Flutter packages,
+            QR code tools, Raspberry Pi kiosks, and receipt printer integrations.
+        </div>
+    </section>
+
+    <section>
+        <h2>Highlighted Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="tag">Java · Spring</div>
+                <h3>spring-data-jpa-extension</h3>
+                <p>
+                    Extension library for Spring Data JPA that adds additional repository
+                    and persistence functionality for enterprise Java applications.
+                </p>
+                <a href="https://github.com/hurelhuyag/spring-data-jpa-extension" target="_blank">View Project →</a>
+            </div>
+
+            <div class="card">
+                <div class="tag">Java · API</div>
+                <h3>ebarimt</h3>
+                <p>
+                    Java classes and utilities for working with the Mongolian ebarimt 3.0 API,
+                    including receipt and QR-related functionality.
+                </p>
+                <a href="https://github.com/hurelhuyag/ebarimt" target="_blank">View Project →</a>
+            </div>
+
+            <div class="card">
+                <div class="tag">Flutter · Dart</div>
+                <h3>build_badge</h3>
+                <p>
+                    Flutter package that displays build and version badges inside applications,
+                    useful during development and testing.
+                </p>
+                <a href="https://github.com/hurelhuyag/build_badge" target="_blank">View Project →</a>
+            </div>
+
+            <div class="card">
+                <div class="tag">Java · Hibernate</div>
+                <h3>jackson-datatype-hibernate0</h3>
+                <p>
+                    Jackson module for better serialization support with Hibernate entities,
+                    lazy-loading, and persistence-layer objects.
+                </p>
+                <a href="https://github.com/hurelhuyag/jackson-datatype-hibernate0" target="_blank">View Project →</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Specialized Utilities</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="tag">Database · Mongolia</div>
+                <h3>Mongolian Unicode Collation</h3>
+                <p>
+                    SQL collation rules and examples for proper Mongolian Unicode sorting in
+                    MySQL and MariaDB databases.
+                </p>
+                <a href="https://gist.github.com/hurelhuyag" target="_blank">View Gist →</a>
+            </div>
+
+            <div class="card">
+                <div class="tag">Hardware · POS</div>
+                <h3>Bixolon Printer Java Example</h3>
+                <p>
+                    Example code for integrating Bixolon receipt printers from Java,
+                    including POS and ESC command handling.
+                </p>
+                <a href="https://gist.github.com/hurelhuyag" target="_blank">View Gist →</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill">Java</div>
+            <div class="skill">Spring</div>
+            <div class="skill">Hibernate</div>
+            <div class="skill">Flutter</div>
+            <div class="skill">Dart</div>
+            <div class="skill">Android</div>
+            <div class="skill">Raspberry Pi</div>
+            <div class="skill">Linux</div>
+            <div class="skill">MariaDB</div>
+            <div class="skill">PostgreSQL</div>
+            <div class="skill">Git</div>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Hurelhuyag · Built with plain HTML and CSS
+    </footer>
+</div>
+</body>
+</html>
